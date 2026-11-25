@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE RISE | Empower Every Woman</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff5fa;
+      color: #39243b;
+    }
+
+    header {
+      background: #922c78;
+      color: white;
+      padding: 22px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 8px;
+    }
+
+    nav {
+      background: #70205f;
+      padding: 14px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: linear-gradient(135deg, #f8c6e3, #e7c7ff);
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      background: #922c78;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      margin-top: 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .features {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 25px;
+      color: #922c78;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 18px;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px #00000012;
+    }
+
+    .card .emoji {
+      font-size: 38px;
+    }
+
+    .card h3 {
+      margin: 12px 0;
+      color: #922c78;
+    }
+
+    .card p {
+      line-height: 1.5;
+    }
+
+    .card button {
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #922c78;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #70205f;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🌸 SHE RISE</h1>
+    <p>Dream Big. Grow Strong. Rise Together.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Explore</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Welcome to SHE RISE!</h2>
+    <p>A place where every woman can learn, grow,<br>
+    discover opportunities and become independent.</p>
+    <button onclick="explore()">Explore Now</button>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Discover Your Opportunities</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="emoji">📚</div>
+        <h3>Learn & Grow</h3>
+        <p>Explore educational resources and develop new skills.</p>
+        <button onclick="showMessage('Learning')">Explore</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">💼</div>
+        <h3>Career & Jobs</h3>
+        <p>Discover career guidance and job opportunities.</p>
+        <button onclick="showMessage('Career & Jobs')">Explore</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">💰</div>
+        <h3>Financial Growth</h3>
+        <p>Learn about saving, budgeting and financial independence.</p>
+        <button onclick="showMessage('Financial Growth')">Explore</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🛡️</div>
+        <h3>Women's Safety</h3>
+        <p>Find useful safety information and support resources.</p>
+        <button onclick="showMessage('Women Safety')">Explore</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🤝</div>
+        <h3>Community</h3>
+        <p>Connect, share ideas and inspire one another.</p>
+        <button onclick="showMessage('Community')">Explore</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🌱</div>
+        <h3>Self Development</h3>
+        <p>Build confidence and work towards your dreams.</p>
+        <button onclick="showMessage('Self Development')">Explore</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="features" id="about">
+    <h2>Our Mission</h2>
+    <p>To empower every woman with knowledge,
+    opportunities, confidence and independence.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 SHE RISE | Together We Rise 🌸</p>
+  </footer>
+
+  <script>
+    function explore() {
+      document.getElementById("features").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    function showMessage(section) {
+      alert(section + " section is coming soon!");
+    }
+  </script>
+
+</body>
+</html>
