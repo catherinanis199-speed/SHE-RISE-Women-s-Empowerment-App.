@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHE RISE - Python Course</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff4fa;
+  color: #39243b;
+}
+header {
+  background: #913b83;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+nav {
+  background: #67245f;
+  padding: 15px;
+  text-align: center;
+}
+nav a { color: white; margin: 12px; text-decoration: none; }
+.container {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.lesson {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px #e2c9df;
+}
+h2, h3 { color: #913b83; }
+pre {
+  background: #282438;
+  color: #b8f5c8;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+button {
+  background: #913b83;
+  color: white;
+  border: 0;
+  padding: 12px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.question {
+  background: #f8e6f3;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+footer {
+  background: #67245f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🐍 SHE RISE PYTHON ACADEMY</h1>
+<p>Learn Python From Zero!</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="learning.html">Learning Hub</a>
+</nav>
+
+<div class="container">
+
+<h2>Welcome to Python Programming!</h2>
+<p>Start your coding journey with these beginner-friendly lessons.</p>
+
+<div class="lesson">
+<h2>Lesson 1: Introduction to Python</h2>
+<p>Python is a popular programming language. It is used to create websites, applications, automation tools and much more.</p>
+<h3>Your first Python program</h3>
+<pre>print("Hello, World!")</pre>
+<p>Output:</p>
+<pre>Hello, World!</pre>
+</div>
+
+<div class="lesson">
+<h2>Lesson 2: Variables</h2>
+<p>Variables are used to store information.</p>
+<pre>
+name = "Anu"
+age = 20
+print(name)
+print(age)
+</pre>
+<p>Output:</p>
+<pre>
+Anu
+20
+</pre>
+</div>
+
+<div class="lesson">
+<h2>Lesson 3: Data Types</h2>
+<p>Python has different types of data.</p>
+<pre>
+name = "Anu"
+age = 20
+height = 5.4
+is_student = True
+</pre>
+<ul>
+<li>String: Text</li>
+<li>Integer: Whole numbers</li>
+<li>Float: Decimal numbers</li>
+<li>Boolean: True or False</li>
+</ul>
+</div>
+
+<div class="lesson">
+<h2>Lesson 4: User Input</h2>
+<p>The input() function allows users to enter information.</p>
+<pre>
+name = input("Enter your name: ")
+print("Welcome", name)
+</pre>
+</div>
+
+<div class="lesson">
+<h2>Lesson 5: Python Quiz</h2>
+<p>Test what you have learned!</p>
+
+<div class="question">
+<p><b>1. Which function displays output in Python?</b></p>
+<label><input type="radio" name="q1" value="a"> input()</label><br>
+<label><input type="radio" name="q1" value="b"> print()</label><br>
+<label><input type="radio" name="q1" value="c"> display()</label>
+</div>
+
+<div class="question">
+<p><b>2. Which data type stores whole numbers?</b></p>
+<label><input type="radio" name="q2" value="a"> String</label><br>
+<label><input type="radio" name="q2" value="b"> Float</label><br>
+<label><input type="radio" name="q2" value="c"> Integer</label>
+</div>
+
+<div class="question">
+<p><b>3. Which symbol is used to assign a value?</b></p>
+<label><input type="radio" name="q3" value="a"> =</label><br>
+<label><input type="radio" name="q3" value="b"> ==</label><br>
+<label><input type="radio" name="q3" value="c"> +</label>
+</div>
+
+<br>
+<button onclick="checkQuiz()">Submit Quiz</button>
+<p id="result"></p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 SHE RISE | Learn • Grow • Rise ❤️</p>
+</footer>
+
+<script>
+function checkQuiz() {
+  const answers = {q1:"b", q2:"c", q3:"a"};
+  let score = 0;
+
+  for (let q in answers) {
+    const selected = document.querySelector(
+      'input[name="' + q + '"]:checked'
+    );
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerHTML =
+    "You scored " + score + " out of 3! 🌸 " +
+    (score === 3 ? "Excellent work!" : "Keep practising!");
+}
+</script>
+
+</body>
+</html>
